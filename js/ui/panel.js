@@ -588,9 +588,6 @@ class QuickSettings extends PanelMenu.Button {
             sibling, N_QUICK_SETTINGS_COLUMNS);
         this._addItemsBefore(this._brightness.quickSettingsItems,
             sibling, N_QUICK_SETTINGS_COLUMNS);
-        if (this._payg)
-            this._addItemsBefore(this._payg.quickSettingsItems,
-                sibling, N_QUICK_SETTINGS_COLUMNS);
 
         this._addItemsBefore(this._camera.quickSettingsItems, sibling);
         this._addItemsBefore(this._remoteAccess.quickSettingsItems, sibling);
@@ -607,6 +604,10 @@ class QuickSettings extends PanelMenu.Button {
         this._addItemsBefore(this._rfkill.quickSettingsItems, sibling);
         this._addItemsBefore(this._autoRotate.quickSettingsItems, sibling);
         this._addItemsBefore(this._unsafeMode.quickSettingsItems, sibling);
+
+        if (this._payg)
+            this._addItemsBefore(this._payg.quickSettingsItems,
+                sibling, N_QUICK_SETTINGS_COLUMNS);
 
         // append background apps
         this._backgroundApps.quickSettingsItems.forEach(
